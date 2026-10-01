@@ -4,55 +4,92 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<title>PokéDoc Tino</title>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>PokéDoc Tino - Restauro Carte Pokémon Grosseto</title>
 <style>
-body{margin:0;background:#2596BE;color:#1A140E;font-family:Arial,sans-serif}
-header{text-align:center;padding:50px 20px;background:#2596BE;border-bottom:5px solid #FCE5BC}
-.logo{width:185px;height:185px;border-radius:50%;border:5px solid #FCE5BC;box-shadow:0 0 35px rgba(0,0,0,.3);background:#000;object-fit:cover}
-h1{color:#FCE5BC;margin:20px 0 5px;letter-spacing:2px;font-size:2.4em;text-shadow:0 2px 4px rgba(0,0,0,.3)}
-header p{color:#fff}
-.btn{background:#FCE5BC;color:#1A140E;padding:13px 28px;border-radius:30px;text-decoration:none;font-weight:900;margin:6px;display:inline-block;box-shadow:0 4px 10px rgba(0,0,0,.2)}
-.btn:hover{background:#fff;transform:translateY(-2px)}
-section{max-width:850px;margin:auto;padding:30px 20px;text-align:center}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left;max-width:700px;margin:0 auto 25px;background:#FCE5BC;padding:18px;border-radius:14px;box-shadow:0 4px 15px rgba(0,0,0,.15)}
-.grid2 b{color:#1A140E}
-.listino{display:grid;gap:18px;max-width:700px;margin:25px auto}
-.card{background:#FCE5BC;border:3px solid #1A140E;border-radius:18px;padding:20px;text-align:left;color:#1A140E;text-decoration:none;display:block;box-shadow:0 6px 18px rgba(0,0,0,.2)}
-.card:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.3)}
-.row{display:flex;gap:12px;margin-top:12px}
-.pill{flex:1;border:2px solid #1A140E;border-radius:12px;padding:10px;text-align:center;background:#fff}
-.pill.gold{background:#1A140E;color:#FCE5BC;font-weight:900;border-color:#1A140E}
-.prezzo{font-size:1.6em;font-weight:900;display:block;color:#1A140E}
+*{box-sizing:border-box}
+body{margin:0;background:#2596BE;color:#1A140E;font-family:'Segoe UI',Arial,sans-serif;line-height:1.5}
+header{text-align:center;padding:55px 20px 45px;background:#2596BE;border-bottom:6px solid #FCE5BC}
+.logo{width:190px;height:190px;border-radius:50%;border:6px solid #FCE5BC;box-shadow:0 0 35px rgba(0,0,0,.35);background:#000;object-fit:cover;display:block;margin:0 auto}
+h1{color:#FCE5BC;margin:22px 0 6px;letter-spacing:2.5px;font-size:2.5em;text-shadow:0 2px 8px rgba(0,0,0,.35);font-weight:900}
+header p{color:#ffffff;font-size:1.1em;margin:0;opacity:.95}
+.btns{margin-top:22px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.btn{background:#FCE5BC;color:#1A140E;padding:13px 28px;border-radius:50px;text-decoration:none;font-weight:900;font-size:1em;box-shadow:0 4px 12px rgba(0,0,0,.25);transition:.2s}
+.btn:hover{background:#fff;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.3)}
+section{max-width:900px;margin:auto;padding:32px 20px;text-align:center}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left;max-width:720px;margin:0 auto 30px;background:#FCE5BC;padding:20px;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.18);border:2px solid #1A140E}
+.grid2 b{color:#1A140E;font-size:1.05em}
+.grid2 div{line-height:1.6}
+h2{color:#FCE5BC;text-shadow:0 2px 6px rgba(0,0,0,.4);font-size:1.8em;margin-bottom:20px;letter-spacing:1px}
+.listino{display:grid;gap:20px;max-width:720px;margin:25px auto}
+.card{background:#FCE5BC;border:3px solid #1A140E;border-radius:20px;padding:22px;text-align:left;color:#1A140E;text-decoration:none;display:block;box-shadow:0 8px 22px rgba(0,0,0,.22);transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.32)}
+.card h3{margin:0 0 4px;font-size:1.25em;font-weight:900}
+.row{display:flex;gap:14px;margin-top:14px}
+.pill{flex:1;border:2px solid #1A140E;border-radius:14px;padding:12px 8px;text-align:center;background:#ffffff;font-weight:600}
+.pill.gold{background:#1A140E;color:#FCE5BC;border-color:#1A140E;font-weight:900}
+.prezzo{font-size:1.7em;font-weight:900;display:block;margin-top:4px;color:#1A140E}
 .pill.gold .prezzo{color:#FCE5BC}
-.banner{background:#1A140E;color:#FCE5BC;padding:14px;border-radius:14px;font-weight:900;margin-top:25px;font-size:1.1em}
-h2{color:#FCE5BC;text-shadow:0 1px 3px rgba(0,0,0,.3)}
+.banner{background:#1A140E;color:#FCE5BC;padding:16px;border-radius:14px;font-weight:900;margin-top:30px;font-size:1.15em;letter-spacing:.5px;box-shadow:0 4px 15px rgba(0,0,0,.25)}
+footer{margin-top:40px;padding:20px;color:#fff;opacity:.8;font-size:.9em}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}.row{flex-direction:column}h1{font-size:2em}}
 </style>
 </head>
 <body>
 <header>
-<img id="logo" src="logo2.png" class="logo" alt="PokeDoc Tino Logo">
+<img id="logo" src="logo2.png" class="logo" alt="PokeDoc Tino">
 <h1>POKÉDOC TINO</h1>
 <p>Restauro e conservazione carte Pokémon — Grosseto</p>
-<div style="margin-top:20px">
-<a class="btn" href="https://www.instagram.com/pokedoctino26/">Instagram</a>
-<a class="btn" href="https://www.tiktok.com/@pokedoctino26">TikTok</a>
-<a class="btn" href="https://www.youtube.com/@PokeDocTino">YouTube</a>
+<div class="btns">
+<a class="btn" href="https://www.instagram.com/pokedoctino26/" target="_blank">Instagram</a>
+<a class="btn" href="https://www.tiktok.com/@pokedoctino26" target="_blank">TikTok</a>
+<a class="btn" href="https://www.youtube.com/@PokeDocTino" target="_blank">YouTube</a>
+<a class="btn" href="https://tally.so/r/LZRYbp" target="_blank">Prenota Ora</a>
 </div>
 </header>
+
 <section>
 <div class="grid2">
-<div><b>✨ Pulizia:</b><br>• sporco e puntini neri<br>• graffi holo<br>• ravvivamento pigmenti</div>
-<div><b>🔧 Restauro:</b><br>• pressioni<br>• grinze, pieghe<br>• angoli sbeccati</div>
+<div><b>✨ Pulizia professionale</b><br>• rimozione sporco e puntini neri<br>• lucidatura graffi holo<br>• ravvivamento pigmenti e bordi</div>
+<div><b>🔧 Restauro conservativo</b><br>• appiattimento pressioni<br>• recupero grinze e pieghe<br>• sistemazione angoli sbeccati</div>
 </div>
+
 <h2>PREZZARIO — Clicca per prenotare</h2>
+
 <div class="listino">
-<a class="card" href="https://tally.so/r/LZRYbp?fascia=fino200"><h3 style="margin:0">Fino a 200€ RAW</h3><div class="row"><div class="pill">Solo pulizia<span class="prezzo">15€</span></div><div class="pill gold">Pulizia+Restauro<span class="prezzo">25€</span></div></div></a>
-<a class="card" href="https://tally.so/r/LZRYbp?fascia=200-400"><h3 style="margin:0">Da 200 a 400€ RAW</h3><div class="row"><div class="pill">Solo pulizia<span class="prezzo">20€</span></div><div class="pill gold">Pulizia+Restauro<span class="prezzo">35€</span></div></div></a>
-<a class="card" href="https://tally.so/r/LZRYbp?fascia=oltre400"><h3 style="margin:0">Oltre 400€ RAW</h3><div class="row"><div class="pill">Solo pulizia<span class="prezzo">20€</span></div><div class="pill gold">Pulizia+Restauro<span class="prezzo">40€</span></div></div></a>
+<a class="card" href="https://tally.so/r/LZRYbp?fascia=fino200">
+<h3>Fino a 200€ RAW</h3>
+<div class="row">
+<div class="pill">Solo pulizia<span class="prezzo">15€</span></div>
+<div class="pill gold">Pulizia + Restauro<span class="prezzo">25€</span></div>
 </div>
-<div class="banner">🎁 SCONTI PER ORDINI SUPERIORI A 10 CARTE</div>
+</a>
+
+<a class="card" href="https://tally.so/r/LZRYbp?fascia=200-400">
+<h3>Da 200 a 400€ RAW</h3>
+<div class="row">
+<div class="pill">Solo pulizia<span class="prezzo">20€</span></div>
+<div class="pill gold">Pulizia + Restauro<span class="prezzo">35€</span></div>
+</div>
+</a>
+
+<a class="card" href="https://tally.so/r/LZRYbp?fascia=oltre400">
+<h3>Oltre 400€ RAW</h3>
+<div class="row">
+<div class="pill">Solo pulizia<span class="prezzo">20€</span></div>
+<div class="pill gold">Pulizia + Restauro<span class="prezzo">40€</span></div>
+</div>
+</a>
+</div>
+
+<div class="banner">🎁 SCONTI DEDICATI PER ORDINI SUPERIORI A 10 CARTE</div>
+
+<footer>© 2026 PokéDoc Tino — Grosseto, Tuscany</footer>
 </section>
+
 <script>
+// ANTI-CACHE DEFINITIVO PER LOGO2
 document.getElementById('logo').src = 'logo2.png?v=' + Date.now();
 </script>
 </body>
