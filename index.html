@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <title>PokéDoc Tino</title>
 <style>
 body{margin:0;background:#1A140E;color:#FFF2D1;font-family:Arial,sans-serif}
 header{text-align:center;padding:50px 20px;background:#1A140E;border-bottom:4px solid #E9B44C}
-.logo{width:185px;height:185px;border-radius:50%;border:5px solid #E9B44C;box-shadow:0 0 35px rgba(233,180,76,.6);background:#000}
+.logo{width:185px;height:185px;border-radius:50%;border:5px solid #E9B44C;box-shadow:0 0 35px rgba(233,180,76,.6);background:#000;object-fit:cover}
 h1{color:#E9B44C;margin:20px 0 5px;letter-spacing:2px;font-size:2.3em}
 .btn{background:#E9B44C;color:#1A140E;padding:12px 26px;border-radius:30px;text-decoration:none;font-weight:900;margin:6px;display:inline-block}
 section{max-width:850px;margin:auto;padding:30px 20px;text-align:center}
@@ -26,13 +27,13 @@ section{max-width:850px;margin:auto;padding:30px 20px;text-align:center}
 </head>
 <body>
 <header>
-<img id="logo2" src="logo2.png" class="logo">
+<img id="logo" src="logo2.png" class="logo" alt="PokeDoc Tino Logo">
 <h1>POKÉDOC TINO</h1>
 <p style="opacity:.9">Restauro e conservazione carte Pokémon — Grosseto</p>
 <div style="margin-top:18px">
 <a class="btn" href="https://www.instagram.com/pokedoctino26/">Instagram</a>
 <a class="btn" href="https://www.tiktok.com/@pokedoctino26">TikTok</a>
-<a class="btn" href="https://www.youtube.com/@PokéDocTino">YouTube</a>
+<a class="btn" href="https://www.youtube.com/@PokeDocTino">YouTube</a>
 </div>
 </header>
 <section>
@@ -42,11 +43,15 @@ section{max-width:850px;margin:auto;padding:30px 20px;text-align:center}
 </div>
 <h2 style="color:#E9B44C">PREZZARIO — Clicca per prenotare</h2>
 <div class="listino">
-<a class="card" href="https://tally.so/r/LZRYbp?fascia=fino200"><h3 style="margin:0;color:#E9B44C">Fino a 200€ RAW</h3><div class="row"><div class="pill">Solo pulizia<span class="prezzo">15€</span></div><div class="pill gold">Pulizia+Restauro<span class="prezzo">25€</span></div></div><small>👉 Clicca per richiedere</small></a>
-<a class="card" href="https://tally.so/r/LZRYbp?fascia=200-400"><h3 style="margin:0;color:#E9B44C">Da 200 a 400€ RAW</h3><div class="row"><div class="pill">Solo pulizia<span class="prezzo">20€</span></div><div class="pill gold">Pulizia+Restauro<span class="prezzo">35€</span></div></div><small>👉 Clicca per richiedere</small></a>
-<a class="card" href="https://tally.so/r/LZRYbp?fascia=oltre400"><h3 style="margin:0;color:#E9B44C">Oltre 400€ RAW</h3><div class="row"><div class="pill">Solo pulizia<span class="prezzo">20€</span></div><div class="pill gold">Pulizia+Restauro<span class="prezzo">40€</span></div></div><small>👉 Clicca per richiedere</small></a>
+<a class="card" href="https://tally.so/r/LZRYbp?fascia=fino200"><h3 style="margin:0;color:#E9B44C">Fino a 200€ RAW</h3><div class="row"><div class="pill">Solo pulizia<span class="prezzo">15€</span></div><div class="pill gold">Pulizia+Restauro<span class="prezzo">25€</span></div></div></a>
+<a class="card" href="https://tally.so/r/LZRYbp?fascia=200-400"><h3 style="margin:0;color:#E9B44C">Da 200 a 400€ RAW</h3><div class="row"><div class="pill">Solo pulizia<span class="prezzo">20€</span></div><div class="pill gold">Pulizia+Restauro<span class="prezzo">35€</span></div></div></a>
+<a class="card" href="https://tally.so/r/LZRYbp?fascia=oltre400"><h3 style="margin:0;color:#E9B44C">Oltre 400€ RAW</h3><div class="row"><div class="pill">Solo pulizia<span class="prezzo">20€</span></div><div class="pill gold">Pulizia+Restauro<span class="prezzo">40€</span></div></div></a>
 </div>
 <div class="banner">🎁 SCONTI PER ORDINI SUPERIORI A 10 CARTE</div>
 </section>
+<script>
+// FORZA SEMPRE IL LOGO NUOVO
+document.getElementById('logo').src = 'logo2.png?v=' + Date.now();
+</script>
 </body>
 </html>
