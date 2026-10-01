@@ -3,51 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restauro Carte</title>
+<title>Restauro Carte Pokémon - Grosseto</title>
 <style>
 body{
 margin:0;
-background:#FCE5BC;
+background-color:#FCE5BC;
 background-image:url('sfondo.jpeg');
 background-repeat:repeat;
-background-size:400px;
+background-size:420px;
+background-attachment:fixed;
 font-family:Arial,sans-serif;
 text-align:center;
+position:relative;
+}
+body::before{
+content:"";
+position:fixed;
+top:0;left:0;right:0;bottom:0;
+background:rgba(252,229,188,0.82);
+z-index:-1;
+pointer-events:none;
 }
 h1{
 color:#2596BE;
+font-size:32px;
+margin-top:30px;
+text-shadow:1px 1px 0px rgba(0,0,0,0.1);
 }
-.gallery-wrap{
-margin:20px auto;
+.gallery-wrap, .cover-wrap{
+margin:30px auto;
 max-width:400px;
 background:white;
-padding:15px;
-border-radius:15px;
-border:3px solid #2596BE;
+padding:20px;
+border-radius:20px;
+border:4px solid #2596BE;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
-.gallery-wrap img{
+.gallery-wrap img, .cover-wrap img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
+display:block;
+}
+.cover-link{
+display:block;
+text-decoration:none;
+}
+.wa-button{
+display:inline-block;
+margin:30px auto;
+background:#25D366;
+color:white;
+padding:15px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
 }
 </style>
 </head>
 <body>
 
-<h1>Restauro Carte Pokémon</h1>
+<h1>Restauro Carte Pokémon<br>Grosseto</h1>
 
+<!-- PRIMA COVER - GALLERY -->
 <div class="gallery-wrap">
-<a href="gallery.html">
-<img src="gallery.jpg" alt="Galleria">
+<p style="color:#2596BE;font-weight:900;margin-top:0">CLICCA PER VEDERE I LAVORI</p>
+<a class="cover-link" href="gallery.html">
+<img src="gallery.jpg" alt="I miei lavori">
 </a>
-<p style="color:#2596BE;font-weight:bold">Galleria Lavori</p>
+<p style="color:#2596BE;font-size:13px;margin-bottom:0">Galleria Lavori</p>
 </div>
 
-<div class="gallery-wrap">
-<a href="listino.html">
-<img src="listino.jpg" alt="Listino">
+<!-- SECONDA COVER - LISTINO -->
+<div class="cover-wrap">
+<p style="color:#2596BE;font-weight:900;margin-top:0">CLICCA PER VEDERE I PREZZI</p>
+<a class="cover-link" href="listino.html">
+<img src="listino.jpg" alt="Listino Prezzi">
 </a>
-<p style="color:#2596BE;font-weight:bold">Listino Prezzi</p>
+<p style="color:#2596BE;font-size:13px;margin-bottom:0">Listino Prezzi</p>
 </div>
+
+<a class="wa-button" href="https://wa.me/39XXXXXXXXXX">Contattami su WhatsApp</a>
 
 </body>
 </html>
