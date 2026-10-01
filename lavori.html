@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lavori - PokéDoc Tino</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#FCE5BC;font-family:Arial}
+header{text-align:center;padding:20px;border-bottom:6px solid #2596BE}
+.btn{background:#2596BE;color:#fff;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:900;display:inline-block}
+.section{max-width:950px;margin:auto;padding:15px}
+.group{background:#fff;border:3px solid #2596BE;border-radius:16px;padding:15px;margin-bottom:20px}
+.group h2{margin:0 0 10px;color:#2596BE;font-size:17px;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;border:2px solid #eee;cursor:pointer}
+#light{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:99}
+#light.show{display:flex}#light img{max-width:95%;max-height:85%;border-radius:12px}
+</style>
+</head>
+<body>
+<header>
+<a class="btn" href="index.html">⬅️ Torna alla Home</a>
+<h1 style="color:#2596BE;font-weight:900">I MIEI LAVORI</h1>
+</header>
+<div class="section">
+<div class="group"><h2>Arcanine leg. collection</h2><div class="grid"><img src="galleryrestore/1.jpg"><img src="galleryrestore/2.jpg"></div></div>
+<div class="group"><h2>Garchomp ex</h2><div class="grid"><img src="galleryrestore/3.jpg"><img src="galleryrestore/4.jpg"></div></div>
+<div class="group"><h2>Gengar Fossil</h2><div class="grid"><img src="galleryrestore/5.jpg"><img src="galleryrestore/6.jpg"><img src="galleryrestore/7.jpg"><img src="galleryrestore/8.jpg"></div></div>
+<div class="group"><h2>Vaporeon jungle</h2><div class="grid"><img src="galleryrestore/9.jpg"><img src="galleryrestore/10.jpg"><img src="galleryrestore/11.jpg"><img src="galleryrestore/12.jpg"></div></div>
+<div class="group"><h2>Venusaur Base set</h2><div class="grid"><img src="galleryrestore/13.jpg"><img src="galleryrestore/14.jpg"></div></div>
+<div class="group"><h2>Lugia Crystal</h2><div class="grid"><img src="galleryrestore/15.jpg"><img src="galleryrestore/16.jpg"></div></div>
+<div class="group"><h2>Nidoking leg. collection</h2><div class="grid"><img src="galleryrestore/17.jpg"><img src="galleryrestore/18.jpg"></div></div>
+<div class="group"><h2>Naruto promo DB</h2><div class="grid"><img src="galleryrestore/19.jpg"><img src="galleryrestore/20.jpg"></div></div>
+</div>
+<div id="light"><img id="lightImg"></div>
+<script>
+const light=document.getElementById('light'),li=document.getElementById('lightImg');
+document.querySelectorAll('.grid img').forEach(i=>i.onclick=()=>{li.src=i.src;light.classList.add('show')});
+light.onclick=()=>light.classList.remove('show');
+</script>
+</body>
+</html>
